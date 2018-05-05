@@ -1,6 +1,13 @@
 const fs = require('fs');
 
-const files = fs.readdirSync('/assets/photos/');
-console.log('alsdkmflaskdf', files);
+const joinedRoutes = [];
+const files = fs.readdirSync(__dirname);
 
-export default {};
+files
+  .filter(file => file !== 'index.js')
+  .forEach((file) => {
+    const routes = require(`./${file.split('.')[0]}`).default; // eslint-disable-line
+    joinedRoutes.push(...routes);
+  });
+
+export default joinedRoutes;

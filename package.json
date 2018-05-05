@@ -4,8 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "build": "babel src/ -d dist/",
+    "build": "rm -rf dist && babel src/ -d dist/",
     "start": "node dist/server",
+    "dev": "nodemon --ignore 'dist/**/*' --ignore 'node_modules/**/*' --exec 'npm run build && npm start'",
+    "predev": "npm run build",
     "test": "test"
   },
   "keywords": [
@@ -15,6 +17,8 @@
   "license": "MIT",
   "dependencies": {
     "flow": "^0.2.3",
+    "babel-core": "^6.26.3",
+    "babel-polyfill": "^6.26.0",
     "hapi": "^17.4.0"
   },
   "devDependencies": {

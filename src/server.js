@@ -1,4 +1,7 @@
 import hapi from 'hapi';
+import 'babel-core/register';
+import 'babel-polyfill';
+
 import routes from './routes/index';
 
 const server = hapi.server({
@@ -6,7 +9,8 @@ const server = hapi.server({
   port: 8000,
 });
 
-console.log(routes);
+routes.forEach(route => server.route(route));
+
 const start = async () => {
   try {
     await server.start();

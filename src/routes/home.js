@@ -2,7 +2,7 @@
 export default [
   {
     method: 'GET',
-    path: '/{name}',
+    path: '/',
     handler: () => 'MoviesV1',
   },
 ];
