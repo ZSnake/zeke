@@ -1,0 +1,7 @@
+{
+  "presets": ["flow", "es2015", "stage-2"],
+  "ignore": [
+    "/node_modules/*",
+    "/dist/*"
+  ]
+}
