@@ -1,3 +1,22 @@
 {
-    "extends": "airbnb-base"
+    "extends": "airbnb-base",
+    "env": {
+      "jest": true
+    },
+    "parser": "babel-eslint",
+    "plugins": [
+      "flowtype"
+    ],
+    "rules": {
+      "import/prefer-default-export": "off"
+    },
+    "overrides": [
+      {
+        "files": ["src/*.js"],
+        "excludedFiles": "*/__tests__/*.test.js",
+        "rules": {
+          "quotes": [ 2, "single" ]
+        }
+      }
+    ]
 }
