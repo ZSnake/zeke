@@ -23,7 +23,7 @@ export const fetchFilteredMovies =
     let result: Movie[] = [];
     try {
       const response: SocrataResponse =
-        await axios.get(`${socrataApi.host}?${filter}=${filterValue}`);
+        await axios.get(`${socrataApi.host}&${filter}=${filterValue}`);
       result = response.data;
     } catch (error) {
       throw new Error(`Movies could not be retrieved: ${error}`);

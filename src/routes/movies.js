@@ -1,11 +1,13 @@
+// @flow
+import type { Route } from '../types/routes';
+import moviesHandler from '../handlers/movies';
 
-// async () => {
-//   let result = [];
-//   try {
-//     result = await fetchAllMovies();
-//   } catch (error) {
-//     console.log(error);
-//     result = ['error'];
-//   }
-//   return result;
-// };
+const routes: Route[] = [
+  {
+    method: 'GET',
+    path: '/movies',
+    handler: moviesHandler.getMovies,
+  },
+];
+
+export default routes;
