@@ -7,6 +7,11 @@ import routes from './routes/index';
 const server = hapi.server({
   host: 'localhost',
   port: 8000,
+  routes: {
+    cors: {
+      origin: ['*'],
+    },
+  },
 });
 
 routes.forEach(route => server.route(route));
