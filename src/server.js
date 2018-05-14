@@ -4,6 +4,7 @@ import 'babel-polyfill';
 
 import routes from './routes/index';
 
+console.log(process.env.PORT);
 const server = hapi.server({
   host: 'localhost',
   port: process.env.PORT || 8000,
