@@ -12,4 +12,5 @@ export type Movie = {
   release_year: string,
   title: string,
   writer: string,
+  location: Object,
 };

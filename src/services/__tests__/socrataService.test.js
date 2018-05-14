@@ -83,7 +83,7 @@ describe('Socrata Service', () => {
       try {
         axios.get.mockResolvedValue(filteredMovies);
         await fetchFilteredMovies(testFilter, testFilterValue);
-        expect(axios.get).toHaveBeenCalledWith(`${socrataApi.host}?${testFilter}=${testFilterValue}`);
+        expect(axios.get).toHaveBeenCalledWith(`${socrataApi.host}&${testFilter}=${testFilterValue}`);
       } catch (error) {
         throw new Error(error);
       }
