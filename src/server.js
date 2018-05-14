@@ -6,7 +6,7 @@ import routes from './routes/index';
 
 const server = hapi.server({
   host: 'localhost',
-  port: process.env.port || 8000,
+  port: process.env.PORT || 8000,
   routes: {
     cors: {
       origin: ['*'],
