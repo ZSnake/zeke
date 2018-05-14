@@ -5,8 +5,8 @@
   "main": "server.js",
   "scripts": {
     "build": "rm -rf dist && babel src/ -d dist/",
-    "start": "node dist/server",
-    "dev": "nodemon --ignore 'dist/**/*' --ignore 'node_modules/**/*' --exec 'npm run build && npm start'",
+    "start": "npm run build && node dist/server",
+    "dev": "nodemon --ignore 'dist/**/*' --ignore 'node_modules/**/*' --exec 'npm start'",
     "predev": "npm run build"
   },
   "keywords": [
