@@ -19,9 +19,10 @@ routes.forEach(route => server.route(route));
 
 const start = async () => {
   try {
+    console.log('inside try', server.options.port);
     await server.start();
   } catch (err) {
-    console.log(err);
+    console.log('Error', err);
     process.exit(1);
   }
 
