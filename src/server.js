@@ -4,9 +4,7 @@ import 'babel-polyfill';
 
 import routes from './routes/index';
 
-console.log(process.env.PORT);
 const server = hapi.server({
-  host: 'localhost',
   port: process.env.PORT || 8000,
   routes: {
     cors: {
@@ -19,7 +17,6 @@ routes.forEach(route => server.route(route));
 
 const start = async () => {
   try {
-    console.log('inside try', server.options.port);
     await server.start();
   } catch (err) {
     console.log('Error', err);
