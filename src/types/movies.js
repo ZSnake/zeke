@@ -12,5 +12,12 @@ export type Movie = {
   release_year: string,
   title: string,
   writer: string,
-  location: Object,
+  location: {
+    Location: {
+      DisplayPosition: {
+        Latitude: number,
+        Longitude: number,
+      }
+    }
+  }
 };
