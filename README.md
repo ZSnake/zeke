@@ -24,3 +24,6 @@ Mainly due to time constrains some things I wanted to implement were left out.
 - More thorough testing (only happy path testing for now)
 - Custom search and filtering (using Socratas filter right now)
 - More detailed information for movies (integration to https://www.themoviedb.org/documentation/api)
+## Urls
+- Frontend: https://shagohod.herokuapp.com/
+- Backend: https://zekeapi.herokuapp.com/
