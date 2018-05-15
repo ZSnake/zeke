@@ -13,7 +13,7 @@ and more specifically an API provided by socrata.com https://dev.socrata.com/fou
 these are accessed through services used by the `movies` domain model; the model is the accessed by the handler who
 directly returns the information to the client.
 
-## Technologies used
+## Technologies used (around 3 years of xp)
 - HapiJS 17
 - Axios
 - Flow
