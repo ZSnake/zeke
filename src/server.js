@@ -9,6 +9,7 @@ const server = hapi.server({
   routes: {
     cors: {
       origin: ['*'],
+      additionalHeaders: ['Accept-Language'],
     },
   },
 });
